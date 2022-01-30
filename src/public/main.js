@@ -1,37 +1,16 @@
 const socket = io()
 
+let renderNotes = true
+
+    
+
 
 
 const form = document.querySelector('#formCrud')
 const notes = document.querySelector('#notes')
 
 
-
-
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    // extrayendo valores del formulario
-    const title = e.target.elements.title.value
-    const content = e.target.elements.content.value
-    const important = e.target.elements.important.checked ?? false
-
-    // creando objeto con los valores del formulario
-    const note = {
-        title,
-        content,
-        important
-    }
-
-    //  * evet para enviar el objeto note al servidor
-
-
-    socket.emit('client:addNote', note)
-    notes.appendChild(item)
-})
-
-
-socket.on('server:addNote', note => {
+function RenderNote(note) {
     const item = document.createElement('div')
     item.classList.add('item')
     item.innerHTML = `
@@ -47,4 +26,31 @@ socket.on('server:addNote', note => {
     }
 
     notes.appendChild(item)
+}
+
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    // extrayendo valores del formulario
+    const title = e.target.elements.title ?? ''
+    const content = e.target.elements.content ?? ''
+    const important = e.target.elements.important ?? false
+    // creando objeto con los valores del formulario
+    const note = {
+        title: title.value,
+        content: content.value,
+        important: important.checked
+    }
+    // 
+    title.value = ' '
+    content.value = ' '
+    important.chekend = false
+
+    // enviando objeto al servidor
+    socket.emit('client:addnote', note)
+})
+
+
+socket.on('server:addnote', note => {
+    RenderNote(note)
 })
