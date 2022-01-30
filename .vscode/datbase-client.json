@@ -1,0 +1,44 @@
+{
+    "nosql.connections": {
+        "1643433849426": {
+            "host": "cluster0.tjen3.mongodb.net",
+            "dbPath": "",
+            "port": 27017,
+            "user": "admin",
+            "authType": "default",
+            "password": "admin",
+            "encoding": "utf8",
+            "clientKeyPath": null,
+            "clientCertPath": null,
+            "caPath": null,
+            "database": "mongodb+srv://admin:<password>@cluster0.tjen3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+            "useSSL": false,
+            "usingSSH": false,
+            "showHidden": false,
+            "includeDatabases": null,
+            "dbType": "MongoDB",
+            "encrypt": true,
+            "isCluster": false,
+            "connectionUrl": "mongodb+srv://admin:admin@cluster0.tjen3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+            "srv": true,
+            "esAuth": "none",
+            "global": false,
+            "key": "1643433849426",
+            "timezone": "+00:00",
+            "ssh": {
+                "host": "",
+                "privateKeyPath": "/home/itsdavidev/.ssh/id_rsa",
+                "port": 22,
+                "username": "root",
+                "type": "password",
+                "connectTimeout": 10000,
+                "algorithms": {
+                    "cipher": []
+                }
+            },
+            "name": "DavSock",
+            "useConnectionString": true,
+            "connectionKey": "nosql.connections"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "davsock",
+  "version": "1.0.1",
+  "description": "crud whit Socketio",
+  "main": "index.js",
+  "author": "itsDavidev",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.1.8",
+    "nodemon": "^2.0.15",
+    "redis": "^4.0.2",
+    "socket.io": "^4.4.1"
+  }
+}

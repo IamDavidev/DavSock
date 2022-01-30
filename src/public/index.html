@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <title>DavSock</title>
+  </head>
+  <body>
+    <h1>welcome to crud whit socket.io</h1>
+    <div class="crud">
+     
+      <section class="form">
+        <form id="formCrud">
+          <label>
+            <strong> title </strong>
+            <input type="text" name="title" placeholder="Title" />
+          </label>
+          <label>
+            <strong> content </strong>
+            <textarea name="content" placeholder="content "></textarea>
+          </label>
+          <input type="checkbox" name="important" id="imp" />
+          <button>add Note</button>
+        </form>
+      </section> <section id="notes" class="notes"></section>
+    </div>
+    <script src="/socket.io/socket.io.min.js" z></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
