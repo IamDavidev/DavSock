@@ -11,9 +11,10 @@ function RenderNote(note) {
     item.classList.add('item')
     item.innerHTML = `
     <div class="note">
-        <h1 class="title">${note.title}</h1>
-        <p class="content">${note.content}</p>
-        <button class="delete">Delete</button>
+        <h1 class="noteTitle">${note.title}</h1>
+        <p class="noteContent">${note.content}</p>
+        <button class="btnDelete" data-id=${note._id}>Delete</button>
+        <button class="btnEdit" data-id=${note._id}>Edit</button>
     </div>
     `
 

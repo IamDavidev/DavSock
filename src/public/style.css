@@ -1,6 +1,6 @@
 body {
-    background: #150655;
-    color: #fff;
+    background-color: #7897AB;
+    color: #010101;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     padding: 0;
@@ -13,6 +13,13 @@ body {
 }
 
 
+.Title {
+    color: #fff;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0), 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+    font: 3rem 'ChunkFiveRegular';
+    margin: 0;
+    padding: 1rem;
+}
 
 .crud {
     display: grid;
@@ -21,43 +28,89 @@ body {
 }
 
 .form {
+    background: url('./assets/ImageForm.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    padding: 2rem;
     grid-column: 1/2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #fff;
+    border: 1px solid rgb(0, 0, 0);
     padding: 1rem;
     margin: 3rem;
-    max-height: 25rem;
+    max-height: 30rem;
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    position: relative;
+
+}
+
+.form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 label {
     display: flex;
     flex-direction: column;
 }
-input, textarea{
+
+input,
+textarea {
     background: transparent;
-    border:none;
-    padding:1rem;
-    color: #fff;
-    border-bottom: 1px solid #0ff;
+    border: none;
+    padding: 1rem;
     margin: 1rem;
+    border-radius: 3px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
-textarea{
+
+textarea {
     min-width: 20rem;
     min-height: 10rem;
-    max-width:20rem;
+    max-width: 20rem;
     max-height: 10rem;
 }
-input:focus, textarea:focus {
+
+input:focus,
+textarea:focus {
     outline: none;
 }
 
-strong{
+input::placeholder,
+textarea::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+    letter-spacing: 4px;
+}
+
+strong {
+    color: #23107a;
     font-size: 1.2rem;
-    text-transform:uppercase;
+    text-transform: uppercase;
+}
+
+.addNote {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    background: #2cb67d;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    width: 10rem;
+    position: relative;
 }
 
 
@@ -65,20 +118,39 @@ strong{
     grid-column: 2/4;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
     padding: 1rem;
     margin: 0 5rem;
 }
-.note{
+
+.note {
     width: 100%;
+    border-radius: 13px;
+    background: #7897AB;
+    box-shadow: 23px 23px 65px #627c8c,
+        -23px -23px 65px #8eb2ca;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.btnDelete,
+.btnEdit {
+    background: #7f5af0;
+    border: none;
+    color: #ffe;
+    padding: 1rem 2rem;
+    margin: .5rem;
+    border-radius: 1rem;
 
 }
 
-.noteImportant {
-    color: #00f;
-}
-.title{
-    font-size: 1.5rem;
-    text-transform:uppercase;
+.noteTitle {
+    color: #23107a;
+    font-weight: bold;
 }
 
+.noteContent {
+    color: #000000;
+    font-weight: bold;
+    letter-spacing:1px;
+}
