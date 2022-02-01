@@ -103,14 +103,8 @@ strong {
 
 .addNote {
     display: block;
-    margin: 1rem;
-    padding: 1rem;
-    background: #2cb67d;
-    border: none;
-    color: rgb(0, 0, 0);
-    border-radius: 1rem;
-    width: 10rem;
     position: relative;
+    background: linear-gradient(to bottom, #59C173, #000000);
 }
 
 
@@ -133,15 +127,21 @@ strong {
     margin: 2rem 0;
 }
 
-.btnDelete,
-.btnEdit {
-    background: #7f5af0;
-    border: none;
+.btn {
+    border:none;
+    padding: 1rem 2rem; 
+    margin:.5rem;
+    border-radius: 1rem ; 
     color: #ffe;
-    padding: 1rem 2rem;
-    margin: .5rem;
-    border-radius: 1rem;
+}
+.btnDelete{
+    background: #c31432; 
+    background: linear-gradient(to bottom, #c31432, #200108);
+}
 
+.btnEdit {
+    background: #59C173;  
+    background: linear-gradient(to bottom, #59C173, #042e17);
 }
 
 .noteTitle {
@@ -153,4 +153,8 @@ strong {
     color: #000000;
     font-weight: bold;
     letter-spacing:1px;
+}
+
+.noteImportant  h1{
+    color: #f00;
 }

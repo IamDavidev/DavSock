@@ -10,7 +10,7 @@ import {
     Server as WebSocketServer
 } from 'socket.io';
 
-import {MongoConnect,Note} from './database/index'
+import { MongoConnect, Note } from './database/index'
 
 
 const app = express()
@@ -46,6 +46,20 @@ io.on('connection', (socked) => {
         })
 
         io.emit('server:addnote', newNote)
+
+    })
+    socked.on('client:delete', (id) => {
+        Note.findByIdAndRemove(id).then(() => {
+            Note.find({}).then(notes => {
+                io.emit('server:rendernotes', notes)
+
+            })
+        })
+    })
+    socked.on('client:edit', id => {
+        Note.findById(id).then(note => {
+            socked.emit('server:edit', note)
+        })
 
     })
 })

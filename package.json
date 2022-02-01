@@ -13,7 +13,7 @@
     "@babel/preset-env": "^7.16.11"
   },
   "scripts": {
-    "start": "nodemon src/index.js --exec babel-node --ignore public"
+    "start": "nodemon src/index.js --exec babel-node --ignore src/public"
   },
   "dependencies": {
     "dotenv": "^14.3.2",
