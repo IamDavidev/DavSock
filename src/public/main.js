@@ -24,21 +24,14 @@ function RenderNote(note) {
         <h1 class="noteTitle">${note.title}</h1>
         <p class="noteContent">${note.content}</p>
         <button    class="btn btnDelete" data-id=${note._id}>Delete</button>
-        <button  class="btn btnEdit" data-id=${note._id}>Edit</button>
     </div>
     `;
 
     const $btndelete = item.querySelector('.btnDelete');
-    const $btnEdit = item.querySelector('.btnEdit');
 
     $btndelete.addEventListener('click', () => {
         const id = $btndelete.getAttribute('data-id');
         socket.emit('client:delete', id)
-    })
-
-    $btnEdit.addEventListener('click', () => {
-        const id = $btnEdit.getAttribute('data-id');
-        socket.emit('client:edit', id);
     })
 
     if (note.important) {

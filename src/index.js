@@ -56,12 +56,6 @@ io.on('connection', (socked) => {
             })
         })
     })
-    socked.on('client:edit', id => {
-        Note.findById(id).then(note => {
-            socked.emit('server:edit', note)
-        })
-
-    })
 })
 
 
